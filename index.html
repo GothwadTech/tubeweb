@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/plustube-icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>PlusTube — A YouTube Client That Learns on Your Device | Gothwad Tube</title>
+    <meta name="description" content="PlusTube (Gothwad Tube) is a free, open-source YouTube and YouTube Music client for Android phones, tablets and Android TV. No ads, no tracking, and PlusTube Neuro — a recommendation engine that runs entirely on your device." />
+    <meta name="keywords" content="PlusTube, Gothwad Tube, Gothwad Tech, YouTube client, Android, Android TV, privacy, recommendation engine, open source, no ads, YouTube Music client" />
+    <meta name="author" content="Gothwad Tech" />
+    
+    <meta property="og:title" content="PlusTube — A YouTube Client That Learns on Your Device" />
+    <meta property="og:description" content="A free, open-source YouTube and YouTube Music client for Android phones, tablets and TV. No ads, no tracking — your feed learns on your device and nowhere else." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tube.gothwadtech.com" />
+    <meta property="og:image" content="https://tube.gothwadtech.com/plustube-og.png" />
+    <meta property="og:site_name" content="PlusTube" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PlusTube — A YouTube Client That Learns on Your Device" />
+    <meta name="twitter:description" content="A free, open-source YouTube and YouTube Music client for Android phones, tablets and TV. No ads, no tracking." />
+    <meta name="twitter:image" content="https://tube.gothwadtech.com/plustube-og.png" />
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <meta name="theme-color" content="#F7F6F3" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)" />
+
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('plustube-theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (saved === 'dark' || (!saved && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+
+      window.addEventListener('error', function (event) {
+        var el = event.target;
+        var url = el && (el.src || el.href);
+        if (!url || url.indexOf('/assets/') === -1) return;
+        try {
+          if (sessionStorage.getItem('plustube-asset-retry')) return;
+          sessionStorage.setItem('plustube-asset-retry', '1');
+        } catch (e) {
+          return;
+        }
+        location.reload();
+      }, true);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
