@@ -50,7 +50,7 @@ function useNavGroups(): NavGroup[] {
                     description: 'Star the source and follow development.',
                     href: 'https://github.com/GothwadTech/tubeapp',
                     external: true,
-                    meta: stats ? `${formatCompact(stats.stars)} stars` : undefined,
+                    meta: stats && stats.stars > 0 ? `${formatCompact(stats.stars)} stars` : undefined,
                 },
                 { label: 'Gothwad Tech', description: 'The team behind PlusTube and the Gothwad ecosystem.', href: 'https://www.gothwadtech.com', external: true },
                 { label: 'X / Twitter', description: 'Follow @GothwadTech for news and releases.', href: 'https://x.com/GothwadTech', external: true },
