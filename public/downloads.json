@@ -4,16 +4,16 @@
       {
         "abi": "universal",
         "flavor": "github",
-        "name": "PlusTube-1.0.18.apk",
-        "size": 28247471,
-        "url": "https://github.com/GothwadTech/tubeapp/releases/download/v1.0.18/PlusTube-1.0.18.apk"
+        "name": "PlusTube-1.0.26.apk",
+        "size": 28266868,
+        "url": "https://github.com/GothwadTech/tubeapp/releases/download/v1.0.26/PlusTube-1.0.26.apk"
       }
     ],
     "checksums_url": null,
-    "published": "2026-10-11T15:09:01Z",
-    "release_url": "https://github.com/GothwadTech/tubeapp/releases/tag/v1.0.18",
-    "tag": "v1.0.18",
-    "version": "1.0.18"
+    "published": "2026-10-12T12:28:59Z",
+    "release_url": "https://github.com/GothwadTech/tubeapp/releases/tag/v1.0.26",
+    "tag": "v1.0.26",
+    "version": "1.0.26"
   },
   "nightly": {
     "android": null

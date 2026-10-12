@@ -6,7 +6,7 @@
     "html_url": "https://github.com/GothwadTech",
     "login": "GothwadTech",
     "name": "Gothwad Tech Official",
-    "public_repos": 37
+    "public_repos": 38
   },
   "repos": [
     {
@@ -33,7 +33,7 @@
       "login": "A-EDev",
       "avatar_url": "https://avatars.githubusercontent.com/u/98699388?v=4",
       "html_url": "https://github.com/A-EDev",
-      "contributions": 901,
+      "contributions": 902,
       "repos": [
         "flow"
       ]
@@ -102,6 +102,16 @@
       ]
     },
     {
+      "login": "GothwadTech",
+      "avatar_url": "https://avatars.githubusercontent.com/u/295316515?v=4",
+      "html_url": "https://github.com/GothwadTech",
+      "contributions": 33,
+      "repos": [
+        "app",
+        "website"
+      ]
+    },
+    {
       "login": "restlessSangoLeelo",
       "avatar_url": "https://avatars.githubusercontent.com/u/264833262?v=4",
       "html_url": "https://github.com/restlessSangoLeelo",
@@ -117,16 +127,6 @@
       "contributions": 19,
       "repos": [
         "flow"
-      ]
-    },
-    {
-      "login": "GothwadTech",
-      "avatar_url": "https://avatars.githubusercontent.com/u/295316515?v=4",
-      "html_url": "https://github.com/GothwadTech",
-      "contributions": 18,
-      "repos": [
-        "app",
-        "website"
       ]
     },
     {
@@ -229,6 +229,15 @@
       ]
     },
     {
+      "login": "AmyJeanes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2363642?v=4",
+      "html_url": "https://github.com/AmyJeanes",
+      "contributions": 4,
+      "repos": [
+        "flow"
+      ]
+    },
+    {
       "login": "Hallo5000",
       "avatar_url": "https://avatars.githubusercontent.com/u/59452026?v=4",
       "html_url": "https://github.com/Hallo5000",
@@ -323,15 +332,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/266954845?v=4",
       "html_url": "https://github.com/PONYATIN",
       "contributions": 3,
-      "repos": [
-        "flow"
-      ]
-    },
-    {
-      "login": "AmyJeanes",
-      "avatar_url": "https://avatars.githubusercontent.com/u/2363642?v=4",
-      "html_url": "https://github.com/AmyJeanes",
-      "contributions": 2,
       "repos": [
         "flow"
       ]
