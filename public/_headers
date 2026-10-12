@@ -5,7 +5,7 @@
 /fonts/*
   Cache-Control: public, max-age=604800
 
-/screenshots/*
+/icons/*
   Cache-Control: public, max-age=604800
 
 # HTML and JSON data files should always be revalidated.
@@ -13,6 +13,9 @@
   Cache-Control: public, max-age=0, must-revalidate
 
 /*.json
+  Cache-Control: public, max-age=0, must-revalidate
+
+/site.webmanifest
   Cache-Control: public, max-age=0, must-revalidate
 
 /*

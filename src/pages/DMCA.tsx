@@ -22,7 +22,7 @@ const sections: LegalSection[] = [
         id: 'this-website',
         title: 'This website',
         content: (
-            <p>The screenshots on this site show the app in use, so they include video thumbnails, channel art and album covers that belong to others, shown incidentally. If one of them includes your work and you'd like it replaced, tell us and we'll swap the screenshot.</p>
+            <p>The interface previews on this site are original illustrations rendered in React and CSS. They do not reproduce app screenshots, video thumbnails, channel art or album covers. If you believe a visual on this site uses your work, contact us and we will review it.</p>
         ),
     },
     {
