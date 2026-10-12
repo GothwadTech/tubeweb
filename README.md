@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="public/plustube-icon.svg" alt="PlusTube" width="88" />
+  <img src="public/icons/icon-192.png" alt="PlusTube" width="88" />
   <h1>PlusTube Website</h1>
   <h3>The official website for PlusTube (Gothwad Tube) — a privacy-respecting YouTube and YouTube Music client for Android by Gothwad Tech.</h3>
 

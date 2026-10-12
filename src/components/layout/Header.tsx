@@ -186,7 +186,7 @@ export function Header() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex md:grid md:grid-cols-[1fr_auto_1fr] items-center justify-between h-16 md:h-20">
                         <Link to="/" className="flex items-center gap-2.5 group justify-self-start" aria-label="PlusTube home">
-                            <img src="/plustube-icon.svg" className="w-9 h-9 md:w-10 md:h-10 object-contain transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6" alt="" />
+                            <img src="/icons/icon-192.png" className="w-9 h-9 md:w-10 md:h-10 object-contain transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6" alt="" />
                             <span className="font-display text-2xl md:text-[1.75rem] font-semibold tracking-[-0.03em] text-text-primary">PlusTube</span>
                         </Link>
 

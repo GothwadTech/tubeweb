@@ -1,13 +1,14 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { ProductPreview } from '@/components/ui/ProductPreview'
 
 const ease = [0.16, 1, 0.3, 1] as const
 
 const heroScreens = [
-    { src: '/screenshots/VideoPlayer.jpeg', alt: 'PlusTube video player', side: true },
-    { src: '/screenshots/Home.jpeg', alt: 'PlusTube home feed', side: false },
-    { src: '/screenshots/MusicPlayer.jpeg', alt: 'PlusTube music player', side: true },
+    { screen: 'watch' as const, className: 'hidden sm:block w-[clamp(145px,17vw,194px)] rotate-[-7deg] translate-y-8' },
+    { screen: 'feed' as const, className: 'w-[clamp(188px,22vw,236px)] relative z-10' },
+    { screen: 'music' as const, className: 'hidden sm:block w-[clamp(145px,17vw,194px)] rotate-[7deg] translate-y-8' },
 ]
 
 const proof = [
@@ -22,7 +23,7 @@ export function Hero() {
     return (
         <section
             id="hero"
-            className="relative h-[100svh] min-h-[680px] flex flex-col overflow-hidden bg-bg-primary border-b border-border-subtle"
+            className="relative min-h-[850px] md:min-h-[970px] flex flex-col overflow-hidden bg-bg-primary border-b border-border-subtle"
         >
             <div className="absolute inset-0 hero-glow pointer-events-none" aria-hidden="true" />
 
@@ -44,9 +45,8 @@ export function Hero() {
                     transition={{ delay: 0.18, duration: 0.7, ease }}
                     className="text-base md:text-lg text-text-secondary max-w-xl mb-8 leading-relaxed"
                 >
-                    PlusTube is a free, open-source YouTube and YouTube Music client for Android
-                    phones, tablets and TVs. No ads, no tracking, and a feed that learns on your
-                    device with PlusTube Neuro — and nowhere else.
+                    Meet PlusTube: a free, open-source YouTube and YouTube Music client for Android.
+                    Watch without ads, find your own rhythm, and keep recommendations on your device.
                 </motion.p>
 
                 <motion.div
@@ -81,28 +81,17 @@ export function Hero() {
                 initial={reduceMotion ? false : { opacity: 0, y: 20, filter: 'blur(4px)' }}
                 animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                 transition={{ delay: 0.45, duration: 0.9, ease }}
-                className="relative z-10 flex-1 flex justify-center items-start gap-7 mt-12 md:mt-14 px-4"
+                className="relative z-10 flex flex-1 items-end justify-center gap-3 sm:gap-5 md:gap-8 mt-10 md:mt-12 px-4 pb-12"
                 aria-hidden="true"
             >
-                {heroScreens.map(screen => (
-                    <div
-                        key={screen.src}
-                        className={
-                            screen.side
-                                ? 'hidden md:block shrink-0 w-[232px] mt-16 rounded-[34px] bg-[#1a1716] p-[7px] border border-border-subtle shadow-[0_30px_60px_-30px_rgba(0,0,0,0.45)]'
-                                : 'shrink-0 w-[min(66vw,268px)] rounded-[34px] bg-[#1a1716] p-[7px] border border-border-subtle shadow-[0_30px_60px_-30px_rgba(0,0,0,0.45)]'
-                        }
-                    >
-                        <img
-                            src={screen.src}
-                            alt=""
-                            width={575}
-                            height={1280}
-                            className="block w-full h-auto rounded-[27px]"
-                        />
-                    </div>
+                {heroScreens.map(({ screen, className }) => (
+                    <ProductPreview key={screen} screen={screen} className={className} />
                 ))}
             </motion.div>
+
+            <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center px-4 pointer-events-none">
+                <span className="hero-code-note"><Sparkles aria-hidden="true" /> Interface previews, built in code</span>
+            </div>
         </section>
     )
 }

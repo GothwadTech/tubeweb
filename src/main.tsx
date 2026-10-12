@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './styles/fonts.css'
 import './styles/globals.css'
+import './styles/product-preview.css'
 
 try { sessionStorage.removeItem('plustube-asset-retry') } catch { /* storage unavailable */ }
 

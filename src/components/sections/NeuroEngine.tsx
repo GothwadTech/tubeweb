@@ -2,6 +2,7 @@ import { ArrowRight } from 'lucide-react'
 import { Section } from '@/components/layout/Section'
 import { FadeIn } from '@/components/ui/TextReveal'
 import { Button } from '@/components/ui/Button'
+import { ProductPreview } from '@/components/ui/ProductPreview'
 
 const points = [
     {
@@ -56,17 +57,8 @@ export function NeuroEngine() {
 
                     <FadeIn delay={0.15} className="lg:col-span-5 flex justify-center">
                         <figure className="w-[min(72vw,300px)]">
-                            <div className="rounded-[36px] bg-[#1a1716] p-[7px] border border-border-subtle shadow-[0_30px_60px_-30px_rgba(0,0,0,0.45)]">
-                                <img
-                                    src="/screenshots/Personality.jpeg"
-                                    alt="The Your taste screen in PlusTube: the persona, profile maturity, and the taste shape chart comparing the whole profile with right now"
-                                    width={575}
-                                    height={1237}
-                                    loading="lazy"
-                                    className="block w-full h-auto rounded-[29px]"
-                                />
-                            </div>
-                            <figcaption className="kicker mt-4 text-center">Settings &rsaquo; Your taste</figcaption>
+                            <ProductPreview screen="taste" />
+                            <figcaption className="kicker mt-4 text-center">An illustrative, code-built taste profile</figcaption>
                         </figure>
                     </FadeIn>
                 </div>

@@ -1,66 +1,79 @@
 import { FadeIn } from '@/components/ui/TextReveal'
+import { ProductPreview, type ProductScreen } from '@/components/ui/ProductPreview'
 
-const mobileScreens = [
-    { src: '/screenshots/Shorts.jpeg', label: 'Shorts' },
-    { src: '/screenshots/Music.jpeg', label: 'Music' },
-    { src: '/screenshots/Personality.jpeg', label: 'Your Taste' },
-    { src: '/screenshots/Library.jpeg', label: 'Library' },
-    { src: '/screenshots/Artist.jpeg', label: 'Artist' },
-    { src: '/screenshots/Channel.jpeg', label: 'Channel' },
-    { src: '/screenshots/Subscriptions.jpeg', label: 'Subscriptions' },
-    { src: '/screenshots/Home.jpeg', label: 'Home Feed' },
-    { src: '/screenshots/VideoPlayer.jpeg', label: 'Video Player' },
-    { src: '/screenshots/MusicPlayer.jpeg', label: 'Music Player' },
+const previews: {
+    screen: ProductScreen
+    index: string
+    kicker: string
+    title: string
+    description: string
+}[] = [
+    {
+        screen: 'feed',
+        index: '01',
+        kicker: 'A FEED THAT FEELS LIKE YOURS',
+        title: 'Curiosity, without the profile.',
+        description: 'Recommendations learn on your device. See what shaped your feed, change it, or start fresh whenever you like.',
+    },
+    {
+        screen: 'music',
+        index: '02',
+        kicker: 'WATCH, LISTEN, MAKE IT YOURS',
+        title: 'The details are in your hands.',
+        description: 'Background play, lyrics, a real queue and controls that stay out of the way. Your library works offline, too.',
+    },
+    {
+        screen: 'tv',
+        index: '03',
+        kicker: 'FROM POCKET TO LIVING ROOM',
+        title: 'Ready for the big screen.',
+        description: 'A TV-first layout built for a remote—not a stretched phone screen. Your experience stays yours on every device.',
+    },
 ]
-
-function StripLabel({ title, note }: { title: string; note: string }) {
-    return (
-        <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-baseline justify-between gap-4 mb-6">
-            <span className="kicker text-text-secondary">{title}</span>
-            <span className="kicker">{note}</span>
-        </div>
-    )
-}
 
 export function AppShowcase() {
     return (
         <section id="showcase" className="bg-bg-secondary border-b border-border-subtle py-20 md:py-28 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 md:px-8 mb-12 md:mb-16">
+            <div className="max-w-7xl mx-auto px-4 md:px-8">
                 <FadeIn>
-                    <p className="kicker mb-4">01 &middot; Every Screen</p>
-                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-text-primary mb-6">
-                        Made for Android. All of it.
-                    </h2>
-                    <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
-                        The same PlusTube on your phone, your tablet and your TV. One private
-                        library, one on-device feed, one app built for every screen you own —
-                        no desktop filler, no compromises.
-                    </p>
+                    <div className="mb-12 md:mb-16 max-w-3xl">
+                        <p className="kicker mb-4">01 &middot; Every Screen</p>
+                        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-text-primary mb-6">
+                            Made for Android. All of it.
+                        </h2>
+                        <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
+                            Phone, tablet or TV: PlusTube brings your library and private recommendations along.
+                            These original interface illustrations are composed in React and CSS—not copied screenshots.
+                        </p>
+                    </div>
                 </FadeIn>
-            </div>
 
-            <StripLabel title="Phone &middot; Tablet &middot; Android TV" note="Available Now" />
-            <div className="marquee w-full mb-6">
-                <div className="marquee-track flex w-max gap-6 md:gap-8">
-                    {[...mobileScreens, ...mobileScreens].map((screen, i) => (
-                        <figure key={i} className="shrink-0 w-[170px] md:w-[210px]">
-                            <div className="aspect-[1/2.16] rounded-2xl border border-border-subtle bg-bg-primary overflow-hidden">
-                                <img
-                                    src={screen.src}
-                                    alt={`PlusTube on Android: ${screen.label}`}
-                                    loading="lazy"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            <figcaption className="kicker mt-3 text-center">{screen.label}</figcaption>
-                        </figure>
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-6">
+                    {previews.map((preview, i) => (
+                        <FadeIn key={preview.screen} delay={i * 0.07}>
+                            <figure className="product-showcase-card h-full">
+                                <div className="product-showcase-card__visual">
+                                    <div className="product-showcase-card__index">
+                                        <span>{preview.index} / 03</span>
+                                        <span>ILLUSTRATIVE UI</span>
+                                    </div>
+                                    <div className={preview.screen === 'tv' ? 'product-showcase-card__device product-showcase-card__device--tv' : 'product-showcase-card__device'}>
+                                        <ProductPreview
+                                            screen={preview.screen}
+                                            className={preview.screen === 'tv' ? 'w-full max-w-[340px]' : 'w-[min(52vw,190px)]'}
+                                        />
+                                    </div>
+                                </div>
+                                <figcaption className="product-showcase-card__caption">
+                                    <p className="kicker mb-3">{preview.kicker}</p>
+                                    <h3>{preview.title}</h3>
+                                    <p className="product-showcase-card__description">{preview.description}</p>
+                                </figcaption>
+                            </figure>
+                        </FadeIn>
                     ))}
                 </div>
             </div>
-
-            <p className="max-w-7xl mx-auto px-4 md:px-8 text-sm text-text-muted">
-                Screens from PlusTube on Android. Android TV gets its own interface, built for the remote.
-            </p>
         </section>
     )
 }

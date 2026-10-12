@@ -1,13 +1,15 @@
 import { useRef, useState } from 'react'
 import { Section } from '@/components/layout/Section'
 import { FadeIn } from '@/components/ui/TextReveal'
+import { ProductPreview, type ProductScreen } from '@/components/ui/ProductPreview'
 import { cn } from '@/lib/utils'
 
 interface FeatureGroup {
     id: string
     label: string
     lead: string
-    screen: { src: string; alt: string; caption: string; width: number; height: number }
+    preview: ProductScreen
+    caption: string
     items: { title: string; description: string }[]
 }
 
@@ -16,7 +18,8 @@ const groups: FeatureGroup[] = [
         id: 'watch',
         label: 'Watch',
         lead: 'Playback without the parts you skip anyway.',
-        screen: { src: '/screenshots/VideoPlayer.jpeg', alt: 'The PlusTube video player', caption: 'Video player', width: 575, height: 1280 },
+        preview: 'watch',
+        caption: 'Player interface · illustrative preview',
         items: [
             { title: 'SponsorBlock & DeArrow', description: 'Skips sponsors, intros and outros, and swaps clickbait titles and thumbnails for community ones.' },
             { title: 'Return YouTube Dislike', description: 'See the real rating, with community-sourced dislike counts.' },
@@ -37,7 +40,8 @@ const groups: FeatureGroup[] = [
         id: 'listen',
         label: 'Listen',
         lead: 'A music app that happens to live inside a video app.',
-        screen: { src: '/screenshots/MusicPlayer.jpeg', alt: 'The PlusTube music player', caption: 'Music player', width: 575, height: 1280 },
+        preview: 'music',
+        caption: 'Music interface · illustrative preview',
         items: [
             { title: 'Music Player', description: 'Album art, a queue you can reorder, shuffle and repeat.' },
             { title: 'Synchronized Lyrics', description: 'Lyrics that scroll with the song as it plays.' },
@@ -53,7 +57,8 @@ const groups: FeatureGroup[] = [
         id: 'yours',
         label: 'Yours',
         lead: 'No account, no tracking, and it looks the way you want.',
-        screen: { src: '/screenshots/Library.jpeg', alt: 'The PlusTube library', caption: 'Library', width: 575, height: 1280 },
+        preview: 'library',
+        caption: 'Personal library · illustrative preview',
         items: [
             { title: 'No Account, No Tracking', description: 'No Google sign-in, no ads, no analytics. Your data stays on your device.' },
             { title: 'Import & Export', description: 'Bring subscriptions and history from NewPipe or Google Takeout, and export everything anytime.' },
@@ -67,7 +72,8 @@ const groups: FeatureGroup[] = [
         id: 'everywhere',
         label: 'Everywhere',
         lead: 'The same PlusTube on your phone, your tablet and your TV.',
-        screen: { src: '/screenshots/Subscriptions.jpeg', alt: 'The PlusTube subscriptions feed', caption: 'Subscriptions', width: 575, height: 1280 },
+        preview: 'tv',
+        caption: 'Android TV interface · illustrative preview',
         items: [
             { title: 'Android TV', description: 'A TV interface built for the remote, with the same private feed.' },
             { title: 'Tablet Ready', description: 'Layouts that use the bigger screen instead of stretching the phone UI.' },
@@ -161,18 +167,11 @@ export function Features() {
                         </div>
 
                         <div className="lg:col-span-5">
-                            <figure className="sticky top-24">
-                                <div className="mx-auto w-[min(70vw,280px)] rounded-[32px] bg-[#1a1716] p-[6px] border border-border-subtle shadow-[0_30px_60px_-30px_rgba(0,0,0,0.45)]">
-                                    <img
-                                        src={group.screen.src}
-                                        alt={group.screen.alt}
-                                        width={group.screen.width}
-                                        height={group.screen.height}
-                                        loading="lazy"
-                                        className="block w-full h-auto rounded-[26px]"
-                                    />
+                            <figure className="sticky top-24 mx-auto w-full max-w-[360px]">
+                                <div className="mx-auto w-[min(70vw,320px)]">
+                                    <ProductPreview screen={group.preview} />
                                 </div>
-                                <figcaption className="kicker mt-4 text-center">{group.screen.caption}</figcaption>
+                                <figcaption className="kicker mt-4 text-center">{group.caption}</figcaption>
                             </figure>
                         </div>
                     </div>

@@ -85,11 +85,14 @@ function FooterRings() {
                     strokeWidth={36}
                 />
             ))}
-            <g transform={`translate(${RING_CENTER.x - 48} ${RING_CENTER.y - 48}) scale(1.5)`}>
-                <rect x="2" y="2" width="60" height="60" rx="16" fill="#FF3B30" />
-                <path d="M25 19.5c0-1.9 2.1-3.1 3.7-2.1l16.6 9.6c1.6.9 1.6 3.2 0 4.2l-16.6 9.6c-1.6.9-3.7-.2-3.7-2.1V19.5z" fill="#FFFFFF" />
-                <circle cx="18.5" cy="32" r="3.4" fill="#FFFFFF" opacity="0.9" />
-            </g>
+            <image
+                href="/icons/icon-512.png"
+                x={RING_CENTER.x - 48}
+                y={RING_CENTER.y - 48}
+                width="96"
+                height="96"
+                preserveAspectRatio="xMidYMid meet"
+            />
         </svg>
     )
 }
