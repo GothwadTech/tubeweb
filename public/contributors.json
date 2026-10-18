@@ -2,7 +2,7 @@
   "owner": {
     "avatar_url": "https://avatars.githubusercontent.com/u/295316515?v=4",
     "bio": "Developing elite software to empower India's tech independence. Open for all developers and tech enthusiasts to collaborate, innovate, and build the future. ",
-    "followers": 6,
+    "followers": 5,
     "html_url": "https://github.com/GothwadTech",
     "login": "GothwadTech",
     "name": "Gothwad Tech Official",
@@ -84,6 +84,16 @@
       ]
     },
     {
+      "login": "GothwadTech",
+      "avatar_url": "https://avatars.githubusercontent.com/u/295316515?v=4",
+      "html_url": "https://github.com/GothwadTech",
+      "contributions": 39,
+      "repos": [
+        "app",
+        "website"
+      ]
+    },
+    {
       "login": "siggi1984",
       "avatar_url": "https://avatars.githubusercontent.com/u/103368536?v=4",
       "html_url": "https://github.com/siggi1984",
@@ -99,16 +109,6 @@
       "contributions": 38,
       "repos": [
         "flow"
-      ]
-    },
-    {
-      "login": "GothwadTech",
-      "avatar_url": "https://avatars.githubusercontent.com/u/295316515?v=4",
-      "html_url": "https://github.com/GothwadTech",
-      "contributions": 37,
-      "repos": [
-        "app",
-        "website"
       ]
     },
     {
