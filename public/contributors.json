@@ -6,7 +6,7 @@
     "html_url": "https://github.com/GothwadTech",
     "login": "GothwadTech",
     "name": "Gothwad Tech Official",
-    "public_repos": 45
+    "public_repos": 46
   },
   "repos": [
     {
@@ -57,6 +57,16 @@
       ]
     },
     {
+      "login": "GothwadTech",
+      "avatar_url": "https://avatars.githubusercontent.com/u/295316515?v=4",
+      "html_url": "https://github.com/GothwadTech",
+      "contributions": 43,
+      "repos": [
+        "app",
+        "website"
+      ]
+    },
+    {
       "login": "aaasajsldfjsladkfj",
       "avatar_url": "https://avatars.githubusercontent.com/u/179296802?v=4",
       "html_url": "https://github.com/aaasajsldfjsladkfj",
@@ -81,16 +91,6 @@
       "contributions": 40,
       "repos": [
         "flow"
-      ]
-    },
-    {
-      "login": "GothwadTech",
-      "avatar_url": "https://avatars.githubusercontent.com/u/295316515?v=4",
-      "html_url": "https://github.com/GothwadTech",
-      "contributions": 39,
-      "repos": [
-        "app",
-        "website"
       ]
     },
     {
