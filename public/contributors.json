@@ -2,7 +2,7 @@
   "owner": {
     "avatar_url": "https://avatars.githubusercontent.com/u/295316515?v=4",
     "bio": "Alert 🚨 Gothwad Tech has been shutdown form 20 Oct 2026 to 2 May 2027 all the project (20+ web and 15+ android apps) will be paused till 2 May 2027",
-    "followers": 11,
+    "followers": 10,
     "html_url": "https://github.com/GothwadTech",
     "login": "GothwadTech",
     "name": "Gothwad Tech",
@@ -115,7 +115,7 @@
       "login": "Chiehx0220",
       "avatar_url": "https://avatars.githubusercontent.com/u/37178500?v=4",
       "html_url": "https://github.com/Chiehx0220",
-      "contributions": 34,
+      "contributions": 35,
       "repos": [
         "flow"
       ]
@@ -229,6 +229,15 @@
       ]
     },
     {
+      "login": "DiegoLpVn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32961620?v=4",
+      "html_url": "https://github.com/DiegoLpVn",
+      "contributions": 5,
+      "repos": [
+        "flow"
+      ]
+    },
+    {
       "login": "Dyxux",
       "avatar_url": "https://avatars.githubusercontent.com/u/197527666?v=4",
       "html_url": "https://github.com/Dyxux",
@@ -250,15 +259,6 @@
       "login": "AmyJeanes",
       "avatar_url": "https://avatars.githubusercontent.com/u/2363642?v=4",
       "html_url": "https://github.com/AmyJeanes",
-      "contributions": 4,
-      "repos": [
-        "flow"
-      ]
-    },
-    {
-      "login": "DiegoLpVn",
-      "avatar_url": "https://avatars.githubusercontent.com/u/32961620?v=4",
-      "html_url": "https://github.com/DiegoLpVn",
       "contributions": 4,
       "repos": [
         "flow"
