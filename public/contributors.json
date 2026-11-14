@@ -33,7 +33,7 @@
       "login": "A-EDev",
       "avatar_url": "https://avatars.githubusercontent.com/u/98699388?v=4",
       "html_url": "https://github.com/A-EDev",
-      "contributions": 2048,
+      "contributions": 2092,
       "repos": [
         "flow"
       ]
@@ -211,6 +211,15 @@
       ]
     },
     {
+      "login": "AmyJeanes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2363642?v=4",
+      "html_url": "https://github.com/AmyJeanes",
+      "contributions": 6,
+      "repos": [
+        "flow"
+      ]
+    },
+    {
       "login": "FabiRich",
       "avatar_url": "https://avatars.githubusercontent.com/u/76914324?v=4",
       "html_url": "https://github.com/FabiRich",
@@ -260,15 +269,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/455140?v=4",
       "html_url": "https://github.com/mvanhorn",
       "contributions": 5,
-      "repos": [
-        "flow"
-      ]
-    },
-    {
-      "login": "AmyJeanes",
-      "avatar_url": "https://avatars.githubusercontent.com/u/2363642?v=4",
-      "html_url": "https://github.com/AmyJeanes",
-      "contributions": 4,
       "repos": [
         "flow"
       ]
